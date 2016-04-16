@@ -1,6 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="white">#ffffff</color>
+    <color name="default_background">#f2f2f2</color>
+    <color name="text_orange">#ff9910</color>
+    <color name="color_blue">#0061bb</color>
+    <!--<color name="color_blue">#008AFF</color>-->
+    <color name="text_black">#333333</color>
+    <color name="text_light_black">#666666</color>
+    <color name="text_light_grey">#999999</color>
+    <color name="text_deep_orange">#ff6700</color>
+    <color name="line_grey">#e5e5e5</color>
+    <color name="transparent">#000000</color>
+
+    <!--结算字体颜色-->
+    <color name="settle_add_color">#ed713b</color>
+    <color name="settle_min_color">#009e00</color>
+
+    <color name="tab_blue">#008AFF</color>
+    <color name="tab_grey">#AFAFAF</color>
+    <color name="first_page_blue">#0068DC</color>
+    <color name="first_page_orange">#FFA421</color>
+    <color name="first_page_grey">#5D5D5D</color>
+
+    <!--SmartTabLayout-->
+    <color name="medium_text_enabled">#0061bb</color>
+    <color name="medium_text_disabled">#333333</color>
+
 </resources>

@@ -1,3 +1,46 @@
 <resources>
-    <string name="app_name">gangziAndroidTest</string>
+    <string name="app_name">典典养车商家版</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- Main -->
+    <string name="order_receive">接单</string>
+    <string name="my_order">已完成订单</string>
+    <string name="my_balance">结算</string>
+    <string name="my">我的</string>
+    <string name="insurance">代理</string>
+    <!-- newMain-->
+    <string name="first_page">首页</string>
+    <string name="order">订单</string>
+
+    <!-- login -->
+    <string name="login_phone_hint">输入手机号码</string>
+    <string name="login_code_hint">输入短信验证码</string>
+    <string name="login_get_code">获取验证码</string>
+    <string name="not_received_code">没有收到验证码?</string>
+    <string name="login_top_tip">为了防止用户信息被盗用，请使用本机号码登录</string>
+    <string name="login">登录</string>
+    <string name="terms_of_service">《典典养车商家服务条款》</string>
+    <string name="service_item_content">典典养车师傅版服务协议由杭州小卡科技有限公司和您签订。\n （一）本协议已对与您的权益有或可能具有重大关系的条款，及对本公司具有或可能具有免责或限制责任的条款，请您注意。您确认，在您注册成为典典养车师傅版用户以接受本服务，或您以其他本公司允许的方式实际使用本服务前，您已充分阅读、理解并接受本协议的全部内容，一旦您使用本服务，即表示您同意遵循本协议之所有约定。 \n（二）您同意，本公司有权随时对本协议内容进行单方面的变更，并以在本网站公告的方式予以公布，无需另行单独通知您；若您在本协议内容公告变更后继续使用本服务的，表示您已充分阅读、理解并接受修改后的协议内容，也将遵循修改后的协议内容使用本服务；若您不同意修改后的协议内容，您应停止使用本服务。\n （三）典典养车师傅版服务协议暂时以线下签署的纸质协议为准，网页版协议待补充，敬请期待。
+	</string>
+    <string name="terms_of_service_tip">我已看过并同意</string>
+    <string name="how_many_seconds_again">%1$d 秒后重新获取</string>
+    <string name="title_activity_order_detail">OrderDetailActivity</string>
+
+    <string name="left_money" formatted="false"><![CDATA[可提现金额：&#160;&#160;<font color="#ed713b">NUM</font>元]]></string>
+    <string name="dateSliderTitle">Selected date</string>
+
+    <string name="sdcard_not_exist">请先插入SD卡</string>
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- Tag的Key -->
+    <string name="tag_view_code">code</string>
+    <string name="tag_view_index">index</string>
+
+    <!--优惠促销-->
+    <string name="in_purchasing">热卖中</string>
+    <string name="all_sales">全部</string>
 </resources>
