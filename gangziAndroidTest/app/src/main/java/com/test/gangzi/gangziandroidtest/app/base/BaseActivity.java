@@ -15,6 +15,7 @@ import com.test.gangzi.gangziandroidtest.AppApplication;
 import com.test.gangzi.gangziandroidtest.AppComponent;
 import com.test.gangzi.gangziandroidtest.R;
 import com.test.gangzi.gangziandroidtest.app.ActivityManager;
+import com.xiaoka.android.common.annotation.ui.XKUIAnnotationParser;
 
 /**
  * Created by gangzi on 2015/6/10.
@@ -36,7 +37,7 @@ public abstract class BaseActivity extends AppCompatActivity {
         setupActivityComponent(AppApplication.get(this).getAppComponent());
         ActivityManager.getInstance().pushActivity(this);
 
-        //XKUIAnnotationParser.parserActivity(this);
+        XKUIAnnotationParser.parserActivity(this);
         //init();
     }
 
