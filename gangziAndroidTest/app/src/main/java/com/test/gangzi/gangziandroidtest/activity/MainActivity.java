@@ -9,6 +9,8 @@ import com.test.gangzi.gangziandroidtest.app.base.BaseActivity;
 import com.test.gangzi.gangziandroidtest.activity.component.DaggerMainActivityComponent;
 import com.test.gangzi.gangziandroidtest.activity.module.MainActivityModule;
 import com.test.gangzi.gangziandroidtest.activity.presenter.MainActivityPresenter;
+import com.xiaoka.android.common.annotation.ui.XKLayout;
+import com.xiaoka.android.common.annotation.ui.XKView;
 
 import javax.inject.Inject;
 
@@ -16,9 +18,10 @@ import butterknife.ButterKnife;
 import butterknife.InjectView;
 
 
+@XKLayout(R.layout.activity_main)
 public class MainActivity extends BaseActivity {
 
-    @InjectView(R.id.tv)
+    @XKView(R.id.tv)
     TextView textView;
 
     @Inject
@@ -28,8 +31,6 @@ public class MainActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        ButterKnife.inject(this);
         presenter.showUserName();
 
 
