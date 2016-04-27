@@ -14,9 +14,6 @@ import com.xiaoka.android.common.annotation.ui.XKView;
 
 import javax.inject.Inject;
 
-import butterknife.ButterKnife;
-import butterknife.InjectView;
-
 
 @XKLayout(R.layout.activity_main)
 public class MainActivity extends BaseActivity {
@@ -32,8 +29,6 @@ public class MainActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         presenter.showUserName();
-
-
     }
 
     @Override

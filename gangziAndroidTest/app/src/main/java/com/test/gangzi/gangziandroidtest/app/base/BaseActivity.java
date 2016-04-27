@@ -23,10 +23,8 @@ import com.xiaoka.android.common.annotation.ui.XKUIAnnotationParser;
 public abstract class BaseActivity extends AppCompatActivity {
 
     public static final String TAG = BaseActivity.class.getSimpleName();
+
     private Toolbar mToolbar;
-    private TextView midTitle;
-    private ImageView ivRight;
-    private TextView tvRight;
 
     private Dialog loadingDialog;
 
@@ -38,16 +36,14 @@ public abstract class BaseActivity extends AppCompatActivity {
         ActivityManager.getInstance().pushActivity(this);
 
         XKUIAnnotationParser.parserActivity(this);
-        //init();
+        init();
     }
 
 
     private void init() {
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
-        midTitle = (TextView) findViewById(R.id.title);
         if (null != mToolbar) {
             setSupportActionBar(mToolbar);
-            midTitle.setText(getTitle());
             mToolbar.setNavigationIcon(R.mipmap.ic_arrows_back);
             mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
                 @Override
@@ -57,55 +53,12 @@ public abstract class BaseActivity extends AppCompatActivity {
                 }
             });
             mToolbar.setTitle("");
+            mToolbar.setTitleTextColor(R.color.black);
         }
         View view = LayoutInflater.from(this).inflate(R.layout.loadingdialog, null);
         loadingDialog = new Dialog(this, R.style.selectorDialog);
         loadingDialog.setContentView(view);
         loadingDialog.setCancelable(false);
-    }
-
-    /**
-     * 设置右上角标题图标
-     *
-     * @param resId
-     */
-    public void showRightImageView(int resId) {
-        ivRight = (ImageView) findViewById(R.id.iv_right);
-        ivRight.setVisibility(View.VISIBLE);
-        ivRight.setImageResource(resId);
-        ivRight.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                onRightImageViewClick();
-            }
-        });
-    }
-
-    /**
-     * 设置右上角标题文案,和监听跳转链接
-     *
-     * @param
-     */
-    public void showRightTextView(String pText, final String pUrl) {
-        tvRight = (TextView) findViewById(R.id.tv_right);
-        tvRight.setVisibility(View.VISIBLE);
-        tvRight.setText(pText);
-        tvRight.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                onRightTextViewClick(pUrl);
-            }
-        });
-    }
-
-    public void showRightTextView(String pText) {
-        showRightTextView(pText, "");
-    }
-
-    public void onRightTextViewClick(String pUrl) {
-    }
-
-    public void onRightImageViewClick() {
     }
 
     public void onNavigationOnClick() {
@@ -118,43 +71,6 @@ public abstract class BaseActivity extends AppCompatActivity {
      */
     protected Toolbar getToolbar() {
         return mToolbar;
-    }
-
-    public void setTitle(String title) {
-        if (null != midTitle && !TextUtils.isEmpty(title)) {
-            /**
-             *  title最多16个字节
-             * */
-            int length = 0; //字节长度
-            int index = 0; //当前索引
-            boolean outOfLength = false; //标记title的字节长度是否超过16
-            for (int i = 0; i < title.length(); i++) {
-                int ascii = Character.codePointAt(title, i);
-                if (ascii >= 0 && ascii <= 255) { //如果非中文，则算一个字节
-                    length++;
-                    if (length == 16) { //如果当前字节长度已经达到16，跳出循环，记录当前索引
-                        index = i;
-                        outOfLength = true;
-                        break;
-                    }
-                } else { //中文算两个字节
-                    length += 2;
-                    if (length > 16) { // 如果当前字节长度大于16，跳出循环，记录当前索引的前一位置
-                        index = i - 1;
-                        outOfLength = true;
-                        break;
-                    } else if (length == 16) { //如果当前字节长度正好为16，则跳出循环，记录当前索引
-                        index = i;
-                        outOfLength = true;
-                        break;
-                    }
-                }
-            }
-            if (outOfLength && title.length() > index + 1) { //如果超出了规定的字符长度则截取
-                title = title.substring(0, index + 1) + "...";
-            }
-            midTitle.setText(title);
-        }
     }
 
     @Override
