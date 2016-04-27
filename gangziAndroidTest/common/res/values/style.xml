@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="XK.Animation.Dialog.InToUp_OutToBottom" parent="android:Animation">
+        <item name="@android:windowEnterAnimation">@anim/xk_anim_bottom_to_up</item>
+        <item name="@android:windowExitAnimation">@anim/xk_anim_up_to_bottom</item>
+    </style>
+    
+	<!-- 自定义仿IOS的AlertDialog的样式 -->
+    <style name="AlertDialogStyle" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+</resources>
