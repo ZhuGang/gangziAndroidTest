@@ -1,5 +1,6 @@
 package com.xiaoka.android.common.utils;
 
+import android.content.Context;
 import android.os.Environment;
 import android.text.TextUtils;
 
@@ -31,6 +32,34 @@ public class XKFileUtil {
         } else
             status = false;
         return status;
+    }
+
+    /**
+     * 得到存储路径
+     * @param pContext
+     * @return
+     */
+    public static File getBasePath(Context pContext) {
+        if (checkSaveLocationExists()) {
+            //有sdcard时存在/mnt/sdcard/Andorid/data/包名/cache目录下
+            return pContext.getExternalCacheDir();
+        } else {
+            //如果SDCARD不存在的情况。/data/data/包名/cache
+            return pContext.getCacheDir();
+        }
+    }
+
+    /**
+     * 得到文件存储路径
+     * @param pContext
+     * @return
+     */
+    public static File getPhotoPath(Context pContext,String pPicDirectoryName){
+        File _picFile= new File(getBasePath(pContext).getPath()+File.separator+pPicDirectoryName);
+        if (!_picFile.exists()){
+            _picFile.mkdirs();
+        }
+        return _picFile;
     }
 
     /**
