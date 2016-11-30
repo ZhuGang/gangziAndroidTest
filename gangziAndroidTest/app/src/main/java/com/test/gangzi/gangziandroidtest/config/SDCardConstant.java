@@ -17,11 +17,11 @@ public final class SDCardConstant {
 	/**
 	 * 资源根目录
 	 */
-	public final static File ROOT = new File(Environment.getExternalStorageDirectory().getAbsolutePath(), "DDYC");
+	public final static File ROOT = new File(Environment.getExternalStorageDirectory().getAbsolutePath(), "Gangzi");
 	/**
 	 * 旧的资源根目录
 	 */
-	public final static File OLD_ROOT = new File(Environment.getExternalStorageDirectory().getAbsolutePath(), "YCDD_BUSINESS");
+	public final static File OLD_ROOT = new File(Environment.getExternalStorageDirectory().getAbsolutePath(), "Gangzi_BUSINESS");
 	
 	/**
 	 * 旧的存放图片缓存的根目录

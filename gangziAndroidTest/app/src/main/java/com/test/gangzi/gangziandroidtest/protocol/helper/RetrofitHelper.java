@@ -1,11 +1,6 @@
 package com.test.gangzi.gangziandroidtest.protocol.helper;
 
-import com.chediandian.business.app.XKApplication;
-import com.chediandian.business.protocol.service.MyService;
-import com.chediandian.business.protocol.service.OrderService;
-import com.chediandian.business.protocol.service.PushService;
-import com.chediandian.business.protocol.service.QuotationService;
-import com.chediandian.business.protocol.service.UserService;
+import com.test.gangzi.gangziandroidtest.protocol.service.OrderService;
 
 /**
  * @author bingo
@@ -21,27 +16,11 @@ public class RetrofitHelper {
      * @param <T>
      * @return
      */
-    public <T> T getService(Class<T> service) {
-        return XKApplication.getRestClient().getService(service);
-    }
+//    public <T> T getService(Class<T> service) {
+//        return XKApplication.getRestClient().getService(service);
+//    }
 
-    public UserService getUserService() {
-        return getService(UserService.class);
-    }
-
-    public PushService getPushService() {
-        return getService(PushService.class);
-    }
-
-    public QuotationService getQuotationService() {
-        return getService(QuotationService.class);
-    }
-
-    public MyService getMyService() {
-        return getService(MyService.class);
-    }
-
-    public OrderService getOrderService() {
-        return getService(OrderService.class);
-    }
+//    public OrderService getOrderService() {
+//        return getService(OrderService.class);
+//    }
 }

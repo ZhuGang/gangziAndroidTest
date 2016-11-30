@@ -105,7 +105,7 @@ public class XKRetrofitClient {
                 dealedHeaders.add(new Header("timestamp", times.get(url)));
                 newReq = new Request(request.getMethod(), url, dealedHeaders, request.getBody());
             }
-            if (request.getMethod().equals("GET")) {
+            if (request.getMethod().equals("GET") && null != mSign) {
                 String url = request.getUrl();
                 if (url.contains("?")) {
                     url = url.substring(url.indexOf("?") + 1, url.length());
