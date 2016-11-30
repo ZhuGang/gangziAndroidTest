@@ -68,6 +68,7 @@ public class AppApplication  extends Application {
         XKLog.init(SDCardConstant.DEBUG_LOG.getAbsolutePath());
         CrashHandler.getInstance().init(this);
         headers = new HashMap<String, String>();
+        
 //        try {
 //            String versionName = getPackageManager().getPackageInfo(getPackageName(), 0).versionName;
 //            int versionCode = getPackageManager().getPackageInfo(getPackageName(), 0).versionCode;
