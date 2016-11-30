@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="cancel">取消</string>
+    <string name="gallery">相册</string>
+    <string name="complete">完成</string>
+    <string name="affirm">确认</string>
+    <string name="gallery_max_select_num">最多选择%1$d张图片</string>
+
+</resources>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 无标题栏的Dialog -->
+    <style name="XK.Theme.Image.Dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <!-- 无标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 背景 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!-- 是否半透明 -->
+        <item name="android:windowIsTranslucent">true</item>
+        <!-- 对话框是否浮动 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 对话框是否有遮盖 -->
+        <item name="android:windowContentOverlay">@null</item>
+        <!-- 是否显示黑色模糊背景 -->
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <!-- 无标题栏的Dialog -->
+    <style name="XK.Theme.Dialog.NoTitleBar" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+</resources>
